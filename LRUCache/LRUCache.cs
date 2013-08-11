@@ -101,7 +101,7 @@ namespace LRUCache
         //Removes last node in dll
         private void RemoveLowPriorityElement()
         {
-            if (head.prev == null)
+            if (head.prev == null || head.prev == head)
                 return;
 
             DLLValue<T> lowEle = head.prev;
